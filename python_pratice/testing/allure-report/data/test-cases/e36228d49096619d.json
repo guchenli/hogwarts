@@ -1,0 +1,116 @@
+{
+  "uid" : "e36228d49096619d",
+  "name" : "test_add[大整数相加]",
+  "fullName" : "test_calc.TestCalc#test_add",
+  "historyId" : "9882e950530ed4ded36384d3cb4469a4",
+  "time" : {
+    "start" : 1607359023067,
+    "stop" : 1607359023067,
+    "duration" : 0
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "get_add_datas",
+    "time" : {
+      "start" : 1607359023067,
+      "stop" : 1607359023067,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  }, {
+    "name" : "get_calc",
+    "time" : {
+      "start" : 1607359023043,
+      "stop" : 1607359023043,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  } ],
+  "afterStages" : [ {
+    "name" : "get_add_datas::0",
+    "time" : {
+      "start" : 1607359023067,
+      "stop" : 1607359023067,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  } ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "测试计算器"
+  }, {
+    "name" : "story",
+    "value" : "测试加法"
+  }, {
+    "name" : "tag",
+    "value" : "first"
+  }, {
+    "name" : "tag",
+    "value" : "add"
+  }, {
+    "name" : "tag",
+    "value" : "run(order=0)"
+  }, {
+    "name" : "suite",
+    "value" : "test_calc"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestCalc"
+  }, {
+    "name" : "host",
+    "value" : "LAPTOP-OS95OIT7"
+  }, {
+    "name" : "thread",
+    "value" : "8396-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_calc"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "get_add_datas",
+    "value" : "[10000, 20000, 30000]"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ "add", "run(order=0)", "first" ]
+  },
+  "source" : "e36228d49096619d.json",
+  "parameterValues" : [ "[10000, 20000, 30000]" ]
+}

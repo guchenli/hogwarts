@@ -1,0 +1,20 @@
+#c = Cat("咪咪","black",1,"male","Short hair")
+#d = Dog("二狗","black",2,"male","Long hair")
+cat_data: &cat
+  name: "咪咪"
+  color: "black"
+  age: 1
+  sex: "male"
+  hair: "Short hair"
+
+dog_data: &dog
+  name: "二狗"
+  color: "black"
+  age: 2
+  sex: "male"
+  hair: "Long hair"
+
+default:
+  <<: *cat
+default1:
+  <<: *dog
