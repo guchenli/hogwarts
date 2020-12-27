@@ -14,16 +14,16 @@ data_file = "D:/pythonProject/hogwarts_gcl/automation/web_automation/selenium_po
 class BasePage:
     _base_url = ""
 
-    def __init__(self, _driver_base: WebDriver = None):
+    def __init__(self, _base_url: WebDriver = None):
         # 避免driver重复初始化，第一次初始化的时候，driver是空的，所以走到了
         # if的逻辑
-        if _driver_base is None:
+        if _base_url is None:
             opt = webdriver.ChromeOptions()
             opt.debugger_address = "127.0.0.1:9222"
             self.driver = webdriver.Chrome(options=opt)
             self.driver.implicitly_wait(10)
         else:
-            self.driver = _driver_base
+            self.driver = _base_url
 
         if self._base_url != "":
             self.driver.get(self._base_url)
