@@ -13,8 +13,6 @@ class TestAddMember(BaseWork):
         self.moveto_text("添加成员").click()
         self.find(MobileBy.XPATH, "//*[@text='手动输入添加']").click()
         self.add_member(name, gender, phone, mailbox, identity)
-        # toast_info = self.find(MobileBy.XPATH, "//*[@class='android.widget.Toast']").text
-        # assert toast_info == "添加成功"
         self.assert_toast_text("添加成功")
         self.back()
         self.del_member(name)
