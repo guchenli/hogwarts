@@ -22,7 +22,7 @@ class TestWait:
         time.sleep(2)
         self.driver.quit()
 def test_wework():
-    #调用chromeoptions方法
+    #调用chromeoptions方法   chrome --remote-debugging-port=9222
     opt = webdriver.ChromeOptions()
     #设置复用浏览器的地址
     opt.debugger_address = "127.0.0.1:9222"

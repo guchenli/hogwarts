@@ -9,6 +9,8 @@ from python_pratice.Python_code.calc import Calculator
 #  错误导入：from Python_code.calc import Calculator
 yaml_file_path = os.path.dirname(__file__) + "\datas\calc.yaml"
 # print(yaml_file_path)
+# a = os.path.dirname(__file__)
+# print(a)
 
 with open(yaml_file_path) as f:
     data_add = yaml.safe_load(f)
