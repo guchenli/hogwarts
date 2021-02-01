@@ -4,7 +4,6 @@ import pytest
 import yaml
 
 from automation.app_automation.test_po.page.app import App
-from automation.app_automation.test_po.page.base_page import BasePage
 
 def get_data():
     with open("../data/data.yaml") as f:

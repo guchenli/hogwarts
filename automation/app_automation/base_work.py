@@ -19,14 +19,14 @@ class BaseWork:
         caps["appPackage"] = "com.tencent.wework"
         caps["appActivity"] = ".launch.WwMainActivity"
         caps["noReset"] = True
-        caps["platformVersion"] = 11
-        caps["unicodeKeyboard"] = True
-        caps["resetKeyboard"] = True
+        # caps["platformVersion"] = 11
+        # caps["unicodeKeyboard"] = True
+        # caps["resetKeyboard"] = True
         # caps["settings[waitForIdleTimeout]"] = 0  #动态页面时间设置0
         # caps["automationName"] = "uiautomator2"   工作引擎
 
         self.driver = webdriver.Remote("http://localhost:4723/wd/hub", caps)
-        self.driver.implicitly_wait(10)
+        self.driver.implicitly_wait(30)
 
     def teardown(self):
         time.sleep(2)
@@ -46,9 +46,10 @@ class BaseWork:
                                         'scrollIntoView(new UiSelector().'
                                         f'text("{text}").instance(0));')
 
-    # 找兄弟元素,例：通过姓名匹配到必填的输入框
+    # 找兄弟元素,例：通过姓名匹配到必填的输入框,,用(MobileBy.XPATH, "//*[contains(@text,'次外出')]").click()
     def BroSelect(self, text1, text2):
-        father_el = self.find(MobileBy.XPATH, f"//*[@text='{text1}']/..").get_attribute("resource-id")
+        # father_el = self.find(MobileBy.XPATH, f"//*[@text='{text1}']/..").get_attribute("resource-id")
+        father_el = self.find(MobileBy.XPATH, f"//*[contains(@text,'{text1}')]/..").get_attribute("resource-id")
         return self.find(MobileBy.ANDROID_UIAUTOMATOR,
                          f'new UiSelector().resourceId("{father_el}").\
                              childSelector(text("{text2}"))')
@@ -99,3 +100,4 @@ class BaseWork:
     def assert_toast_text(self, text):
         toast_info = self.find(MobileBy.XPATH, "//*[@class='android.widget.Toast']").text
         assert toast_info == text
+
